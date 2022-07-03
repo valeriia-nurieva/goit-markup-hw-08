@@ -1,0 +1,37 @@
+.benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--tipycal-margin);
+
+    &__item {
+      width: 100%;
+      @include tablet {
+        width: calc((100% - 30px) / 2);
+      }
+      @include desktop {
+        width: calc((100% - 90px) / 4);
+      }
+    }
+  
+    &__title {
+      margin-bottom: 10px;
+      width: 270px;
+      color: var(--primary-text-colour);
+      @include font(14px, null, 1.14, null);
+      text-transform: uppercase;
+    }
+    
+    &__descr {
+      color: var(--secondary-text-color);
+    }
+    
+    &__thumb {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--tipycal-margin);
+      background-color: var(--secondary-background-color);     
+      height: 120px;
+      width: 100%;
+  }
+}

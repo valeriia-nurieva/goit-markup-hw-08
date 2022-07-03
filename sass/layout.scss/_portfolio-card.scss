@@ -1,0 +1,105 @@
+.card {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__heading {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }   
+    &__title {
+      margin-bottom: 4px;
+      margin-right: auto;
+      margin-left: auto;
+      width: 322px;
+    
+      color: var(--primary-text-colour);
+      @include font(18px, null, 2, 0.06em);
+      text-align: left;
+    }   
+    &__subtitle{
+      margin-right: auto;
+      margin-left: auto;
+    
+      color: var(--secondary-text-color);
+      @include font(16px, null, 1.87, null);
+      width: 322px;
+      text-align: left;
+    }
+  }
+  
+  .card__item {
+    width: calc((100% - 60px) / 3);
+    margin-right: var(--tipycal-margin);
+    margin-bottom: var(--tipycal-margin);
+  
+    border-bottom: 1px solid #eeeeee;
+  
+    transition: opacity var(--timing-function) var(--cubic);
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 0;
+    }
+  }
+
+  .card__link {
+    display: block; 
+    transition: box-shadow var(--timing-function) var(--cubic);
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+
+  .card__thumb {
+    position: relative;
+    overflow: hidden;
+    &::before {
+      display: inline-block;
+      position: absolute;
+      opacity: 0;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: rgba(33, 150, 243, 0.9);
+    
+      transform: translateY(100%);
+      transition: opacity var(--timing-function) var(--cubic),
+        transform var(--timing-function) var(--cubic);
+
+        .card__link:hover &,
+        .card__link:focus & {
+          opacity: 1;
+          transform: translateY(0);
+        }
+    }
+  }
+  
+  .card__descr {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: inline-block;
+    opacity: 0;
+  
+    padding: 63px 24px;
+  
+    @include font(18px, null, 1.5, null); 
+    color: var(--primary-white-color);
+  
+    transform: translateY(100%);
+    transition: opacity var(--timing-function) var(--cubic),
+    transform var(--timing-function) var(--cubic);
+
+    .card__link:hover &,
+    .card__link:focus & {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

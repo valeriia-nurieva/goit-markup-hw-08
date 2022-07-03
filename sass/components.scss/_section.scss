@@ -1,0 +1,21 @@
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+  .section-title {
+    margin-bottom: 30px;
+    @include desktop {
+      margin-bottom: 50px; 
+    } 
+    color: var(--primary-text-colour);
+    @include font(28px, null, 1.17, null);
+    text-align: center;
+    @include desktop {
+      @include font(36px, null, 1.16, null);
+    }
+  }

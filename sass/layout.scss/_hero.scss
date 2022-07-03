@@ -1,0 +1,52 @@
+.hero {
+  padding-top: 118px;
+  padding-bottom: 118px;
+  text-align: center;
+  background-color: rgba(47, 48, 58, 0.4);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../img/background-hero-mob.jpg');
+    @include retina {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../img/background-hero-mob-2x.jpg');
+  }
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1600px;
+  @include tablet {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../img/background-hero-tab.jpg');
+      @include retina {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../img/background-hero-tab-2x.jpg');
+    }
+  }
+  @include desktop {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../img/background-hero.jpg');
+      @include retina {
+          background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+          url('../img/background-hero-2x.jpg');
+      }
+  }
+
+  &__title {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--tipycal-margin);
+    color: var(--primary-white-color);
+    text-transform: uppercase;
+    @include font(26px, 900, 1.61, 0.06em);
+    @include desktop {
+      max-width: 696px;
+      @include font(44px, null, 1.36, null);
+    }
+  }
+  &__button {
+    padding: 10px 32px;
+  }
+}

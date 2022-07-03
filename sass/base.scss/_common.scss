@@ -1,0 +1,9 @@
+.page {
+    color: var(--primary-text-colour);
+    background-color: var(--primary-white-color);
+    font-family: -apple-system, Roboto, sans-serif;
+    @include font(14px, null, 1.71, 0.03em);
+  }
+  
+
+  
