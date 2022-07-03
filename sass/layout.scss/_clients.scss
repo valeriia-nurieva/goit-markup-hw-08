@@ -5,6 +5,7 @@
   }
   
   .clients__item {
+    width: 100%;
     @include mobile {
       width: calc((100% - 30px) / 2);
     }
