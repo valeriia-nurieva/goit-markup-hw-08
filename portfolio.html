@@ -29,7 +29,7 @@
               <a class="site-nav__link list" href="./index.html">Студия</a>
             </li>
             <li class="site-nav__item">
-              <a class="site-nav__link list site-nav__link--current" href="./portfolio.html"
+              <a class="site-nav__link site-nav__link--current list" href="./portfolio.html"
                 >Портфолио</a
               >
             </li>
@@ -54,6 +54,63 @@
             >
           </li>
         </ul>
+        <button type="button" class="menu-btn header__menu-btn" data-menu-open>
+          <svg width="40" height="40">
+            <use href="./img/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <div class="mob-menu is-hidden" data-menu>
+          <div class="mob-menu__container">
+            <div class="mob-menu__top">
+              <button type="button" class="menu-btn mob-menu__menu-btn" data-menu-close>
+                <svg width="40" height="40">
+                  <use href="./img/icons.svg#icon-close-mobmenu"></use>
+                </svg>
+              </button>
+              <ul class="mob-site-nav list">
+                <li class="mob-site-nav__item">
+                  <a class="mob-site-nav__link list" href="./index.html">Студия</a>
+                </li>
+                <li class="mob-site-nav__item">
+                  <a class="mob-site-nav__link site-nav__link--current list" href="./portfolio.html"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="mob-site-nav__item">
+                  <a class="mob-site-nav__link list" href="">Контакты</a>
+                </li>
+              </ul>
+            </div>
+            <div class="mob-menu__bottom">
+              <ul class="mob-connect list">
+                <li class="mob-connect__item-tel">
+                  <a class="mob-connect__link-tel list" href="tel:+380961111111">
+                    +38 096 111 11 11</a
+                  >
+                </li>
+                <li class="mob-connect__item-mail">
+                  <a class="mob-connect__link-mail list" href="mailto:info@devstudio.com">
+                    info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="mob-soc-link list">
+                <li class="mob-soc-link__item">
+                  <a href="" class="mob-soc-link__link list">Instagram</a>
+                </li>
+                <li class="mob-soc-link__item">
+                  <a href="" class="mob-soc-link__link list">Twitter</a>
+                </li>
+                <li class="mob-soc-link__item">
+                  <a href="" class="mob-soc-link__link list">Facebook</a>
+                </li>
+                <li class="mob-soc-link__item">
+                  <a href="" class="mob-soc-link__link list">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -88,11 +145,31 @@
             <li class="card__item">
               <a href="" class="card__link list">
                 <div class="card__thumb">
-                  <img
-                    src="./img/img-web-tekhnokryak.jpg"
-                    alt="Веб-дизайн сайта Технокряк"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="./img/img-web-tekhnokryak.jpg 1x, ./img/img-web-tekhnokryak-2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/img-web-tekhnokryak-tab.jpg    1x,
+                        ./img/img-web-tekhnokryak-tab-2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="
+                        ./img/img-web-tekhnokryak-mob.jpg    1x,
+                        ./img/img-web-tekhnokryak-mob-2x.jpg 2x
+                      "
+                    />
+                    <img
+                      src="./img/img-web-tekhnokryak-mob.jpg"
+                      alt="Веб-дизайн сайта Технокряк"
+                      width="450"
+                    />
+                  </picture>
                   <p class="card__descr">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -108,11 +185,25 @@
             <li class="card__item">
               <a href="" class="card__link list">
                 <div class="card__thumb">
-                  <img
-                    src="./img/img-poster.jpg"
-                    alt="Постер с двумя баскетбольными игроками"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="./img/img-poster.jpg 1x, ./img/img-poster-2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="./img/img-poster-tab.jpg 1x, ./img/img-poster-tab-2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="./img/img-poster-mob.jpg 1x, ./img/img-poster-mob-2x.jpg 2x"
+                    />
+                    <img
+                      src="./img/img-poster-mob.jpg"
+                      alt="Постер с двумя баскетбольными игроками"
+                      width="450"
+                    />
+                  </picture>
                   <p class="card__descr">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit suscipit
                     sapiente neque voluptatum aspernatur deserunt expedita, nostrum officia
@@ -128,7 +219,21 @@
             <li class="card__item">
               <a href="" class="card__link list">
                 <div class="card__thumb">
-                  <img src="./img/img-app-seafood.jpg" alt="Логотип ресторана" width="370" />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="./img/img-app-seafood.jpg 1x, ./img/img-app-seafood-2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="./img/img-app-seafood-tab.jpg 1x, ./img/img-app-seafood-tab-2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="./img/img-app-seafood-mob.jpg 1x, ./img/img-app-seafood-mob-2x.jpg 2x"
+                    />
+                    <img src="./img/img-app-seafood-mob.jpg" alt="Логотип ресторана" width="450" />
+                  </picture>
                   <p class="card__descr">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit suscipit
                     sapiente neque voluptatum aspernatur deserunt expedita, nostrum officia
@@ -144,7 +249,27 @@
             <li class="card__item">
               <a href="" class="card__link list">
                 <div class="card__thumb">
-                  <img src="./img/img-project-prime.jpg" alt="Наушники" width="370" />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="./img/img-project-prime.jpg 1x, ./img/img-project-prime-2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/img-project-prime-tab.jpg    1x,
+                        ./img/img-project-prime-tab-2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="
+                        ./img/img-project-prime-mob.jpg    1x,
+                        ./img/img-project-prime-mob-2x.jpg 2x
+                      "
+                    />
+                    <img src="./img/img-project-prime-mob.jpg" alt="Наушники" width="450" />
+                  </picture>
                   <p class="card__descr">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit suscipit
                     sapiente neque voluptatum aspernatur deserunt expedita, nostrum officia
@@ -160,11 +285,25 @@
             <li class="card__item">
               <a href="" class="card__link list">
                 <div class="card__thumb">
-                  <img
-                    src="./img/img-app-boxes.jpg"
-                    alt="Две коробки - белая и крафт"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="./img/img-app-boxes.jpg 1x, ./img/img-app-boxes-2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="./img/img-app-boxes-tab.jpg 1x, ./img/img-app-boxes-tab-2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="./img/img-app-boxes-mob.jpg 1x, ./img/img-app-boxes-mob-2x.jpg 2x"
+                    />
+                    <img
+                      src="./img/img-app-boxes-mob.jpg"
+                      alt="Две коробки - белая и крафт"
+                      width="450"
+                    />
+                  </picture>
                   <p class="card__descr">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit suscipit
                     sapiente neque voluptatum aspernatur deserunt expedita, nostrum officia
@@ -180,7 +319,31 @@
             <li class="card__item">
               <a href="" class="card__link list">
                 <div class="card__thumb">
-                  <img src="./img/img-web-inspiration.jpg" alt="Веб-дизайн сайта" width="370" />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="./img/img-web-inspiration.jpg 1x, ./img/img-web-inspiration-2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/img-web-inspiration-tab.jpg    1x,
+                        ./img/img-web-inspiration-tab-2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="
+                        ./img/img-web-inspiration-mob.jpg    1x,
+                        ./img/img-web-inspiration-mob-2x.jpg 2x
+                      "
+                    />
+                    <img
+                      src="./img/img-web-inspiration-mob.jpg"
+                      alt="Веб-дизайн сайта"
+                      width="450"
+                    />
+                  </picture>
                   <p class="card__descr">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit suscipit
                     sapiente neque voluptatum aspernatur deserunt expedita, nostrum officia
@@ -196,7 +359,31 @@
             <li class="card__item">
               <a href="" class="card__link list">
                 <div class="card__thumb">
-                  <img src="./img/img-limited-edition.jpg" alt="Илюстрация журнала" width="370" />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="./img/img-limited-edition.jpg 1x, ./img/img-limited-edition-2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/img-limited-edition-tab.jpg    1x,
+                        ./img/img-limited-edition-tab-2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="
+                        ./img/img-limited-edition-mob.jpg    1x,
+                        ./img/img-limited-edition-mob-2x.jpg 2x
+                      "
+                    />
+                    <img
+                      src="./img/img-limited-edition-mob.jpg"
+                      alt="Илюстрация журнала"
+                      width="450"
+                    />
+                  </picture>
                   <p class="card__descr">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit suscipit
                     sapiente neque voluptatum aspernatur deserunt expedita, nostrum officia
@@ -212,7 +399,21 @@
             <li class="card__item">
               <a href="" class="card__link list">
                 <div class="card__thumb">
-                  <img src="./img/img-project-lab.jpg" alt="Дизайн бирки" width="370" />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="./img/img-project-lab.jpg 1x, ./img/img-project-lab-2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="./img/img-project-lab-tab.jpg 1x, ./img/img-project-lab-tab-2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="./img/img-project-lab-mob.jpg 1x, ./img/img-project-lab-mob-2x.jpg 2x"
+                    />
+                    <img src="./img/img-project-lab-mob.jpg" alt="Дизайн бирки" width="450" />
+                  </picture>
                   <p class="card__descr">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit suscipit
                     sapiente neque voluptatum aspernatur deserunt expedita, nostrum officia
@@ -228,11 +429,25 @@
             <li class="card__item">
               <a href="" class="card__link list">
                 <div class="card__thumb">
-                  <img
-                    src="./img/img-app-growing.jpg"
-                    alt="Дизайн страницы приложения"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="./img/img-app-growing.jpg 1x, ./img/img-app-growing-2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="./img/img-app-growing-tab.jpg 1x, ./img/img-app-growing-tab-2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="./img/img-app-growing-mob.jpg 1x, ./img/img-app-growing-mob-2x.jpg 2x"
+                    />
+                    <img
+                      src="./img/img-app-growing-mob.jpg"
+                      alt="Дизайн страницы приложения"
+                      width="450"
+                    />
+                  </picture>
                   <p class="card__descr">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit suscipit
                     sapiente neque voluptatum aspernatur deserunt expedita, nostrum officia
@@ -251,63 +466,65 @@
     </main>
     <footer class="footer">
       <div class="container footer__content">
-        <div>
-          <a class="logo footer__logo list" href="./index.html"
-            >Web<span class="logo__part logo__part--light">Studio</span></a
-          >
-          <address>
-            <ul class="contacts list">
-              <li class="contacts__item">
-                <a
-                  class="contacts__adress link list"
-                  href="https://goo.gl/maps/jDWuq8aFFan7bfQi6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  г. Киев, пр-т Леси Украинки, 26
+        <div class="footer__wrapper-tab">
+          <div class="footer__contacts">
+            <a class="logo footer__logo list" href="./index.html"
+              >Web<span class="logo__part logo__part--light">Studio</span></a
+            >
+            <address>
+              <ul class="contacts list">
+                <li class="contacts__item">
+                  <a
+                    class="contacts__adress link list"
+                    href="https://goo.gl/maps/jDWuq8aFFan7bfQi6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    г. Киев, пр-т Леси Украинки, 26
+                  </a>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link list" href="mailto:info@example.com">info@example.com</a>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link list" href="tel:+380991111111">+38 099 111 11 11</a>
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer__soc-list">
+            <p class="footer__text">присоединяйтесь</p>
+            <ul class="soc-link footer__soc-link list">
+              <li class="soc-link__item">
+                <a href="" class="soc-link__icon soc-icon__icon--white list">
+                  <svg width="20" height="20">
+                    <use href="./img/icons.svg#instagram-icon" />
+                  </svg>
                 </a>
               </li>
-              <li class="contacts__item">
-                <a class="contacts__link list" href="mailto:info@example.com">info@example.com</a>
+              <li class="soc-link__item">
+                <a href="" class="soc-link__icon soc-icon__icon--white list">
+                  <svg width="20" height="20">
+                    <use href="./img/icons.svg#twitter-icon" />
+                  </svg>
+                </a>
               </li>
-              <li class="contacts__item">
-                <a class="contacts__link list" href="tel:+380991111111">+38 099 111 11 11</a>
+              <li class="soc-link__item">
+                <a href="" class="soc-link__icon soc-icon__icon--white list">
+                  <svg width="20" height="20">
+                    <use href="./img/icons.svg#facebook-icon" />
+                  </svg>
+                </a>
+              </li>
+              <li class="soc-link__item">
+                <a href="" class="soc-link__icon soc-icon__icon--white list">
+                  <svg width="20" height="20">
+                    <use href="./img/icons.svg#linkedin-icon" />
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="footer__soc-list">
-          <p class="footer__text">присоединяйтесь</p>
-          <ul class="soc-link footer__soc-link list">
-            <li class="soc-link__item">
-              <a href="" class="soc-link__icon soc-icon__icon--white list">
-                <svg width="20" height="20">
-                  <use href="./img/icons.svg#instagram-icon" />
-                </svg>
-              </a>
-            </li>
-            <li class="soc-link__item">
-              <a href="" class="soc-link__icon soc-icon__icon--white list">
-                <svg width="20" height="20">
-                  <use href="./img/icons.svg#twitter-icon" />
-                </svg>
-              </a>
-            </li>
-            <li class="soc-link__item">
-              <a href="" class="soc-link__icon soc-icon__icon--white list">
-                <svg width="20" height="20">
-                  <use href="./img/icons.svg#facebook-icon" />
-                </svg>
-              </a>
-            </li>
-            <li class="soc-link__item">
-              <a href="" class="soc-link__icon soc-icon__icon--white list">
-                <svg width="20" height="20">
-                  <use href="./img/icons.svg#linkedin-icon" />
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <div class="footer__subscribe">
           <p class="footer__text">Подпишитесь на рассылку</p>
@@ -323,6 +540,6 @@
         </div>
       </div>
     </footer>
-    <script src="./js/menu.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
